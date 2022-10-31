@@ -1,0 +1,87 @@
+body {
+  margin-top: 50;
+}
+
+a {
+  color: rgb(39%, 42%, 49%);
+  font-weight: 600;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.wrapper {
+  display: block;
+  margin-top: 50px;
+  padding: 40px;
+}
+
+.card {
+  padding: 40px;
+  max-width: 600px;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.sun-icon {
+  color: rgb(255, 145, 0);
+}
+
+.storm-icon {
+  color: rgb(7, 7, 209);
+}
+
+.rain-icon {
+  color: rgb(78, 78, 128);
+}
+
+.current-city {
+  font-size: 30px;
+  display: block;
+  font-weight: normal;
+  float: right;
+}
+.current-weather,
+.current-day {
+  font-size: 32px;
+  display: block;
+  padding: 50px 40px;
+}
+
+.icons {
+  font-size: 32px;
+}
+
+.units {
+  font-size: 12px;
+  vertical-align: super;
+}
+
+.search {
+  background: rgb(247, 235, 244);
+  color: rgb(39%, 42%, 49%);
+  border: 2px solid rgb(191, 117, 204);
+  border-radius: 7px;
+  transition: all 200ms ease;
+}
+.search:hover {
+  background: rgb(191, 117, 204);
+  color: rgb(247, 235, 244);
+}
+
+.city {
+  border: 2px solid rgb(191, 117, 204);
+  border-radius: 7px;
+  padding-right: 100px;
+  padding-left: 10px;
+}
+
+.geo-location {
+  border: 0px;
+  background: transparent;
+  padding-left: 0px;
+  text-decoration: underline;
+}
