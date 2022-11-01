@@ -11,12 +11,6 @@ a {
   margin-top: 40px;
 }
 
-.wrapper {
-  display: block;
-  margin-top: 50px;
-  padding: 40px;
-}
-
 .card {
   padding: 40px;
   max-width: 600px;
@@ -38,15 +32,15 @@ a {
   color: rgb(78, 78, 128);
 }
 
-.current-city {
-  font-size: 30px;
-  display: block;
+.current-city,
+.weather-description {
+  font-size: 25px;
   font-weight: normal;
-  float: right;
 }
+
 .current-weather,
 .current-day {
-  font-size: 32px;
+  font-size: 25px;
   display: block;
   padding: 50px 40px;
 }
@@ -84,4 +78,9 @@ a {
   background: transparent;
   padding-left: 0px;
   text-decoration: underline;
+}
+
+.link {
+  display: block;
+  margin-top: 50px;
 }

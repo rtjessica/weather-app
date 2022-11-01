@@ -38,65 +38,70 @@
               value="Search"
               id="city-search" />
           </form>
-          <br />
-          <h2 class="current-city" id="current-place">Miami</h2>
+
+          <div class="container text-center">
+            <div class="row row-cols-2">
+              <div class="col current-city" id="current-place">Miami</div>
+              <div class="col weather-description" id="description">
+                description
+              </div>
+              <div class="col current-weather">
+                <i class="fa-solid fa-sun sun-icon"></i>
+                <span id="temperature">19</span>
+                <span class="units">
+                  <a href="#" id="c-degrees">°C </a>
+                  |
+                  <a href="#" id="f-degrees">°F </a>
+                </span>
+              </div>
+              <div class="col current-day" id="date">Sunday 23:06</div>
+            </div>
+          </div>
 
           <div class="row">
-            <div class="col-6 current-weather">
+            <div class="col-2">Sun</div>
+            <div class="col-2">Mon</div>
+            <div class="col-2">Tue</div>
+            <div class="col-2">Wed</div>
+            <div class="col-2">Thu</div>
+            <div class="col-2">Fri</div>
+          </div>
+          <div class="row">
+            <div class="col-2 icons">
               <i class="fa-solid fa-sun sun-icon"></i>
-              <span id="temperature">19</span>
-              <span class="units">
-                <a href="#" id="c-degrees">°C </a>
-                |
-                <a href="#" id="f-degrees">°F </a>
-              </span>
             </div>
-            <div class="col-6 current-day" id="date">Sunday 23:06</div>
-          </div>
-
-          <div class="wrapper">
-            <div class="row">
-              <div class="col-2">Sun</div>
-              <div class="col-2">Mon</div>
-              <div class="col-2">Tue</div>
-              <div class="col-2">Wed</div>
-              <div class="col-2">Thu</div>
-              <div class="col-2">Fri</div>
+            <div class="col-2 icons">
+              <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
             </div>
-            <div class="row">
-              <div class="col-2 icons">
-                <i class="fa-solid fa-sun sun-icon"></i>
-              </div>
-              <div class="col-2 icons">
-                <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
-              </div>
-              <div class="col-2 icons">
-                <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
-              </div>
-              <div class="col-2 icons">
-                <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
-              </div>
-              <div class="col-2 icons">
-                <i class="fa-solid fa-cloud-sun-rain rain-icon"></i>
-              </div>
-              <div class="col-2 icons">
-                <i class="fa-solid fa-cloud-sun-rain rain-icon"></i>
-              </div>
+            <div class="col-2 icons">
+              <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
             </div>
-
-            <div class="row">
-              <div class="col">33C 26C</div>
-              <div class="col">30C 25C</div>
-              <div class="col">28C 27C</div>
-              <div class="col">30C 26C</div>
-              <div class="col">31C 24C</div>
-              <div class="col">31C 24C</div>
+            <div class="col-2 icons">
+              <i class="fa-solid fa-cloud-showers-heavy storm-icon"></i>
+            </div>
+            <div class="col-2 icons">
+              <i class="fa-solid fa-cloud-sun-rain rain-icon"></i>
+            </div>
+            <div class="col-2 icons">
+              <i class="fa-solid fa-cloud-sun-rain rain-icon"></i>
             </div>
           </div>
-          <a href="https://github.com/rtjessica/weather-app" target="_blank"
-            >Open-source code</a
-          >
-          <span>by Jess Teixeira</span>
+
+          <div class="row">
+            <div class="col">33C 26C</div>
+            <div class="col">30C 25C</div>
+            <div class="col">28C 27C</div>
+            <div class="col">30C 26C</div>
+            <div class="col">31C 24C</div>
+            <div class="col">31C 24C</div>
+          </div>
+
+          <div class="link">
+            <a href="https://github.com/rtjessica/weather-app" target="_blank"
+              >Open-source code</a
+            >
+            <span>by Jess Teixeira</span>
+          </div>
           <script src="src/index.js"></script>
         </div>
       </div>

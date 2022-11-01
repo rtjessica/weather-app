@@ -54,10 +54,14 @@ fahrenheit.addEventListener("click", convertToF);
 */
 
 function showTemp(response) {
+  console.log(response);
   let temp = Math.round(response.data.main.temp);
   let city = response.data.name;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${city}`;
+  let description = response.data.weather[0].description;
+  let place = document.querySelector("#current-place");
+  place.innerHTML = `${city}`;
+  let desc = document.querySelector("#description");
+  desc.innerHTML = `${description}`;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${temp}`;
 }
