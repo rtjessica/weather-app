@@ -36,28 +36,32 @@ let dateDisplay = document.querySelector("#date");
 let date = new Date();
 dateDisplay.innerHTML = formatDate(date);
 
-/*
 function convertToC() {
   let temp = document.querySelector("#temperature");
-  temp.innerHTML = 19;
+  console.log(temp);
+  let tempCelsius = temp.value * 1.8 + 32;
+  console.log(tempCelsius);
+  temp.innerHTML = tempCelsius;
 }
 
 function convertToF() {
   let temp = document.querySelector("#temperature");
-  temp.innerHTML = 66;
+  let tempFahrenheit = temp * 1.8 + 32;
+  console.log(tempFahrenheit);
+  temp.innerHTML = tempFahrenheit;
+  //temp.innerHTML = 66;
 }
 
 let celsius = document.querySelector("#c-degrees");
 celsius.addEventListener("click", convertToC);
 let fahrenheit = document.querySelector("#f-degrees");
 fahrenheit.addEventListener("click", convertToF);
-*/
 
 function showTemp(response) {
   console.log(response);
   let temp = Math.round(response.data.main.temp);
   let city = response.data.name;
-  let description = response.data.weather[0].description;
+  let description = response.data.weather[0].main;
   let place = document.querySelector("#current-place");
   place.innerHTML = `${city}`;
   let desc = document.querySelector("#description");
