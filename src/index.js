@@ -1,17 +1,21 @@
-function getCity(event) {
-  event.preventDefault();
-  //let currentCity = document.querySelector("#current-place");
-  let cityinput = document.querySelector("#city-input").value;
+function getCity(city) {
   let apiKey = "6e6ec494746b5229a9f2d526478c924c";
   let units = "metric";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityinput}&appid=${apiKey}&units=${units}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(url).then(showTemp);
   console.log(url);
-  //currentCity.innerHTML = cityinput.value;
+}
+
+function handleClick(event) {
+  event.defaultPrevented();
+  let cityinput = document.querySelector("#city-input").value;
+  getCity(cityinput);
 }
 
 let citySearch = document.querySelector("#city-search");
-citySearch.addEventListener("click", getCity);
+citySearch.addEventListener("click", handleClick);
+
+getCity("New York");
 
 function formatDate(date) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
