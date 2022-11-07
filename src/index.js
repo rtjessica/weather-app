@@ -59,21 +59,22 @@ fahrenheit.addEventListener("click", convertToF);
 
 function showTemp(response) {
   console.log(response);
-  let temp = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let description = response.data.weather[0].main;
-  let wind = Math.round(response.data.wind.speed);
-  let humidity = response.data.main.humidity;
   let place = document.querySelector("#current-place");
   let desc = document.querySelector("#description");
   let temperature = document.querySelector("#temperature");
   let windInfo = document.querySelector("#wind");
   let humidityInfo = document.querySelector("#humidity");
-  place.innerHTML = `${city}`;
-  desc.innerHTML = `${description}`;
-  temperature.innerHTML = `${temp}`;
-  windInfo.innerHTML = `${wind}`;
-  humidityInfo.innerHTML = `${humidity}`;
+  let iconElement = document.querySelector("#icon");
+  place.innerHTML = response.data.name;
+  desc.innerHTML = response.data.weather[0].main;
+  temperature.innerHTML = Math.round(response.data.main.temp);
+  windInfo.innerHTML = Math.round(response.data.wind.speed);
+  humidityInfo.innerHTML = response.data.main.humidity;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function getPosition(position) {
