@@ -62,12 +62,18 @@ function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   let city = response.data.name;
   let description = response.data.weather[0].main;
+  let wind = Math.round(response.data.wind.speed);
+  let humidity = response.data.main.humidity;
   let place = document.querySelector("#current-place");
-  place.innerHTML = `${city}`;
   let desc = document.querySelector("#description");
-  desc.innerHTML = `${description}`;
   let temperature = document.querySelector("#temperature");
+  let windInfo = document.querySelector("#wind");
+  let humidityInfo = document.querySelector("#humidity");
+  place.innerHTML = `${city}`;
+  desc.innerHTML = `${description}`;
   temperature.innerHTML = `${temp}`;
+  windInfo.innerHTML = `${wind}`;
+  humidityInfo.innerHTML = `${humidity}`;
 }
 
 function getPosition(position) {

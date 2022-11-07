@@ -8,12 +8,8 @@ a {
 }
 
 .container {
-  margin-top: 40px;
-}
-
-.card {
-  padding: 40px;
-  max-width: 600px;
+  padding: 40px 40px 0px 40px;
+  max-width: 900px;
 }
 
 .small-text {
@@ -32,17 +28,26 @@ a {
   color: rgb(78, 78, 128);
 }
 
-.current-city,
-.weather-description {
-  font-size: 25px;
-  font-weight: normal;
+.current-city {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
 }
 
-.current-weather,
-.current-day {
-  font-size: 25px;
+.weather-description,
+.current-day,
+.weather-main {
+  font-size: 15px;
+  font-weight: normal;
+  list-style: none;
+  margin: 0;
+  text-align: left;
+}
+
+.current-weather {
+  font-size: 50px;
   display: block;
-  padding: 50px 40px;
+  margin: 0;
 }
 
 .icons {
@@ -50,8 +55,11 @@ a {
 }
 
 .units {
+  color: #202124;
   font-size: 12px;
-  vertical-align: super;
+  line-height: 50px;
+  margin-top: 6px;
+  vertical-align: top;
 }
 
 .search {
@@ -80,7 +88,13 @@ a {
   text-decoration: underline;
 }
 
-.link {
+.weekly {
+  padding-top: 20px;
+}
+
+.link-git {
   display: block;
-  margin-top: 50px;
+  margin: 0 auto;
+  padding: 0px 150px 0px 150px;
+  max-width: 900px;
 }
