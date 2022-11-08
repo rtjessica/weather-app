@@ -11,10 +11,18 @@ form .search {
   background: #d7c2da;
   color: #ffffff;
   border: 2px solid #d7c2da;
+  padding: 8px 20px 8px 20px;
   border-radius: 7px;
   transition: all 200ms ease;
+  margin-left: 12px;
 }
 
+form .city {
+  border: 2px solid #d7c2da;
+  border-radius: 7px;
+  padding: 8px 10px 8px 10px;
+  width: 319px;
+}
 a {
   color: #666363;
 }
@@ -76,13 +84,6 @@ a {
 }
 .current-weather .active:hover {
   text-decoration: none;
-}
-
-.city {
-  border: 2px solid #d7c2da;
-  border-radius: 7px;
-  padding-right: 100px;
-  padding-left: 10px;
 }
 
 .geo-location {
