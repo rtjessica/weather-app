@@ -27,8 +27,12 @@ a {
   color: #666363;
 }
 
-.link-git a {
+a .link-git {
   font-weight: 600;
+}
+
+ul {
+  padding-left: 0px;
 }
 
 .search:hover {
