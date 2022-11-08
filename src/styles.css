@@ -1,8 +1,9 @@
 body {
   margin-top: 50;
+  color: rgb(49, 1, 78);
 }
 
-a {
+.link-git a {
   color: rgb(39%, 42%, 49%);
   font-weight: 600;
 }
@@ -12,20 +13,8 @@ a {
   max-width: 900px;
 }
 
-.small-text {
+p .small-text {
   font-size: 10px;
-}
-
-.sun-icon {
-  color: rgb(255, 145, 0);
-}
-
-.storm-icon {
-  color: rgb(7, 7, 209);
-}
-
-.rain-icon {
-  color: rgb(78, 78, 128);
 }
 
 .current-city {
@@ -50,19 +39,23 @@ a {
   margin: 0;
 }
 
-.icons {
-  font-size: 32px;
-}
-
-.units {
-  color: #202124;
+.current-weather .units {
   font-size: 12px;
   line-height: 50px;
   margin-top: 6px;
   vertical-align: top;
+  text-decoration: none;
+}
+.current-weather .active {
+  color: rgb(49, 1, 78);
+  cursor: default;
+  text-decoration: none;
+}
+.current-weather .active:hover {
+  text-decoration: none;
 }
 
-.search {
+form .search {
   background: rgb(247, 235, 244);
   color: rgb(39%, 42%, 49%);
   border: 2px solid rgb(191, 117, 204);
