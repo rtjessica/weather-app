@@ -47,7 +47,7 @@ ul {
 
 .card {
   border-color: #d7c2da;
-  background-color: #fef8ff;
+  background-color: #fbf8fb;
 }
 .current-city {
   font-size: 35px;
@@ -99,6 +99,7 @@ ul {
 
 .weekly {
   padding-top: 20px;
+  text-align: center;
 }
 
 .link-git {
