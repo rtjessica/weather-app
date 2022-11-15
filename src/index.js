@@ -17,12 +17,12 @@ function formatDate(date) {
   return formattedDate;
 }
 
-function displayWeeklyForecast() {
+function displayWeeklyForecast(response) {
+  console.log(response.data.daily);
   let forecast = document.querySelector("#weekly-forecast");
 
-  let forecastHTML = `<div class="row">`;
-
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
 
   days.forEach(function (day) {
     forecastHTML =
@@ -43,6 +43,12 @@ function displayWeeklyForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
+}
+
+function accessForecast(coords) {
+  let apiKey = "17ad6e67aa629189f73b053634668b20";
+  let apiUrl = `https:\\api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeeklyForecast);
 }
 
 function showTemp(response) {
@@ -67,7 +73,7 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  displayWeeklyForecast();
+  accessForecast(response.data.coord);
 }
 
 function getCity(city) {
