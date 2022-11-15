@@ -19,20 +19,30 @@ function formatDate(date) {
 
 function displayWeeklyForecast() {
   let forecast = document.querySelector("#weekly-forecast");
-  forecast.innerHTML = `
-  <div class="row">
-    <div class="col-2">
-      <div class="weekly-forecast-date">Sun</div>
-        <img
-          class="weekly-forecast-icons"
-           src="http://openweathermap.org/img/wn/10d@2x.png"
-           id="icon" />
+
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weekly-forecast-date">${day}</div>
+            <img
+              class="weekly-forecast-icons"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              id="icon" />
           <div class="weekly-forecast-temperature">
             <span class="weekly-forecast-temperature-max">20°</span>
             <span class="weekly-forecast-temperature-min">18°</span>
           </div>
-    </div>
-  </div>`;
+       </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
 }
 
 function showTemp(response) {
