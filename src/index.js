@@ -119,23 +119,6 @@ function getPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function convertToC(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-function convertToF(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(tempFahrenheit);
-}
-
 let dateDisplay = document.querySelector("#date");
 let date = new Date();
 dateDisplay.innerHTML = formatDate(date);
@@ -144,12 +127,6 @@ let local = document.querySelector("#geolocation");
 local.addEventListener("click", getPosition);
 
 let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#c-degrees");
-celsiusLink.addEventListener("click", convertToC);
-
-let fahrenheitLink = document.querySelector("#f-degrees");
-fahrenheitLink.addEventListener("click", convertToF);
 
 let citySearch = document.querySelector("#city-search");
 citySearch.addEventListener("click", handleClick);
