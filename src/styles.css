@@ -120,3 +120,8 @@ p .small-text {
   display: block;
   margin: 0 auto;
 }
+
+.weekly-forecast-date,
+.weekly-forecast-temperature-min {
+  color: rgba(0, 0, 0, 0.287);
+}
