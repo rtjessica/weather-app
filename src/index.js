@@ -17,6 +17,24 @@ function formatDate(date) {
   return formattedDate;
 }
 
+function displayWeeklyForecast() {
+  let forecast = document.querySelector("#weekly-forecast");
+  forecast.innerHTML = `
+  <div class="row">
+    <div class="col-2">
+      <div class="weekly-forecast-date">Sun</div>
+        <img
+          class="weekly-forecast-icons"
+           src="http://openweathermap.org/img/wn/10d@2x.png"
+           id="icon" />
+          <div class="weekly-forecast-temperature">
+            <span class="weekly-forecast-temperature-max">20°</span>
+            <span class="weekly-forecast-temperature-min">18°</span>
+          </div>
+    </div>
+  </div>`;
+}
+
 function showTemp(response) {
   console.log(response);
   let place = document.querySelector("#current-place");
@@ -38,6 +56,8 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  displayWeeklyForecast();
 }
 
 function getCity(city) {
