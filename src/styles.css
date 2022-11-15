@@ -8,6 +8,7 @@ a {
 }
 
 ul {
+  margin-top: 16px;
   padding-left: 0px;
 }
 
@@ -69,26 +70,19 @@ p .small-text {
 }
 
 .current-weather {
-  font-size: 50px;
-  display: block;
-  margin: 0;
+  font-size: 53px;
+}
+
+.current-weather .temperature {
+  margin-top: 10px;
+  vertical-align: text-top;
 }
 
 .current-weather .units {
-  color: #d7c2da;
-  font-size: 12px;
-  line-height: 60px;
-  margin-top: 6px;
-  vertical-align: top;
-  text-decoration: none;
-}
-.current-weather .active {
   color: #666363;
-  cursor: default;
-  text-decoration: none;
-}
-.current-weather .active:hover {
-  text-decoration: none;
+  font-size: 12px;
+  line-height: 69px;
+  vertical-align: top;
 }
 
 .geo-location {
