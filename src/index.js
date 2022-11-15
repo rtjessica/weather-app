@@ -62,7 +62,7 @@ function displayWeeklyForecast(response) {
 }
 
 function accessForecast(coords) {
-  let apiKey = "8c48afa47a9a9c24f3500c7039d50aaa";
+  let apiKey = "88724523008dc9e1be18f6eb6a959b67";
   let apiUrl = `https:\\api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeeklyForecast);
 }
